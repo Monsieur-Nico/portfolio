@@ -1,8 +1,13 @@
 // Main icons
+import backend from "./backend.png";
 import close from "./close.svg";
+import creator from "./creator.png";
 import github from "./github.png";
 import logo from "./logo.svg";
 import menu from "./menu.svg";
+import mobile from "./mobile.png";
+import web from "./web.png";
+
 
 // Technologies
 import css from "./tech/css.png";
@@ -34,6 +39,9 @@ import uberLabs from "./projects/UberLabs.svg";
 export {
   logo,
   backend,
+  mobile,
+  creator,
+  web,
   github,
   menu,
   close,

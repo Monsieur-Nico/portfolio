@@ -1,18 +1,17 @@
 import {
+  backend,
   bestBuy,
-  // close,
+  creator,
   css,
   devsden,
   docker,
   figma,
   git,
-  // github,
   html,
   interview,
   javascript,
-  // logo,
-  // menu,
   millennium,
+  mobile,
   mongodb,
   nodejs,
   reactjs,
@@ -22,7 +21,8 @@ import {
   textConvert,
   threejs,
   typescript,
-  uberLabs
+  uberLabs,
+  web
 } from "../assets";
 
 export const navLinks = [
@@ -40,24 +40,24 @@ export const navLinks = [
   },
 ];
 
-// const services = [
-//   {
-//     title: "Web Developer",
-//     icon: web,
-//   },
-//   {
-//     title: "React Native Developer",
-//     icon: mobile,
-//   },
-//   {
-//     title: "Backend Developer",
-//     icon: backend,
-//   },
-//   {
-//     title: "Content Creator",
-//     icon: creator,
-//   },
-// ];
+const services = [
+  {
+    title: "Web Developer",
+    icon: web,
+  },
+  {
+    title: "React Native Developer",
+    icon: mobile,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
+  },
+  {
+    title: "Content Creator",
+    icon: creator,
+  },
+];
 
 const technologies = [
   {
