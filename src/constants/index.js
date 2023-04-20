@@ -10,6 +10,7 @@ import {
   html,
   interview,
   javascript,
+  lighthouse,
   millennium,
   mobile,
   mongodb,
@@ -116,171 +117,168 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "Senior Apple Advisor",
+    company_name: "BestBuy Canada",
     icon: bestBuy,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "July 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Served patrons in a first-point-of-contact role while maintaining health & safety in the workplace.",
+      "Helped manage a team of over 10 members.",
+      "Showed great knowledge in computers and softwares to help customers with their choices.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: millennium,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Owner and Developer",
+    company_name: "Rok Commander",
+    icon: rok,
+    iconBg: "#383E56",
+    date: "Jan 2019 - Oct 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Own a Discord bot with over 2.7 million users.",
+      "Manage customer service functions as well as the development of strategic content for the bot.",
+      "Implementing user-friendly design to ensure all users can use the bot easily and smoothly.",
+      "Creating game infographics for people to use and benefit to learn the game.",
     ],
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: rok,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    company_name: "Lighthouse Labs (Bootcamp)",
+    icon: lighthouse,
+    iconBg: "#E6DEDD",
+    date: "Oct 2021 - Jan 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Completed a comprehensive, 12-week skills development program focused on industry-driven training of full stack development skills, including data modelling, automated testing, and software architecture.",
+      "Collaborating with cross-functional teams to create high-quality projects.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Participating in code reviews and receiving constructive feedback from other developers and mentors.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: rok,
+    title: "Risk Services Agent",
+    company_name: "Millenium1Solutions",
+    icon: millennium,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "2018 - 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Tracked fraud transaction investigations, liaising directly with clients to obtain and assess information.",
+      "Made determinations as to whether certain transactions involved fraud or could be cleared.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+// const testimonials = [
+//   {
+//     testimonial:
+//       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+//     name: "Sara Lee",
+//     designation: "CFO",
+//     company: "Acme Co",
+//     image: "https://randomuser.me/api/portraits/women/4.jpg",
+//   },
+//   {
+//     testimonial:
+//       "I've never met a web developer who truly cares about their clients' success like Rick does.",
+//     name: "Chris Brown",
+//     designation: "COO",
+//     company: "DEF Corp",
+//     image: "https://randomuser.me/api/portraits/men/5.jpg",
+//   },
+//   {
+//     testimonial:
+//       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+//     name: "Lisa Wang",
+//     designation: "CTO",
+//     company: "456 Enterprises",
+//     image: "https://randomuser.me/api/portraits/women/6.jpg",
+//   },
+// ];
 
 const projects = [
   {
-    name: "Devs Den",
+    name: "Dev's Den",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Social media platform for software developers and software engineers to share coding knowledge, learn new things and tackle problems as a community",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "postgreSQL",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Express",
         color: "pink-text-gradient",
       },
     ],
     image: devsden,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Dev-s-Den/Devs-Den",
   },
   {
     name: "Interview Scheduler",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Interview Scheduler is a single page application helps users create appointments, as well as editing and deleting them. Errors handling has been setup be simple.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "storybook",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "cypress",
         color: "pink-text-gradient",
       },
     ],
     image: interview,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Monsieur-Nico/Interview-Scheduler",
   },
   {
     name: "textConvert",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Open source library to convert text into many conventions and formats. Recently implemented converting numbers to text as well.",
     tags: [
       {
-        name: "nextjs",
+        name: "TypeScript",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "chai",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "mocha",
         color: "pink-text-gradient",
       },
     ],
     image: textConvert,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://www.npmjs.com/package/textconvert",
   },
   {
     name: "Uber Labs",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "React based project to provide a simple interface to place orders and for the resturants to manage orders. Using the Twilio API to confirm placing orders.",
     tags: [
       {
-        name: "nextjs",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Express",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Twilio",
         color: "pink-text-gradient",
       },
     ],
     image: uberLabs,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/kencruz/uber-labs",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
