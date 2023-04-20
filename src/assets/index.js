@@ -26,6 +26,7 @@ import typescript from "./tech/typescript.png";
 
 // Companies
 import bestBuy from "./company/bestBuy.png";
+import lighthouse from "./company/lighthouselabs.png";
 import millennium from "./company/millennium1_Solutions.png";
 import rok from "./company/rok_commander.png";
 
@@ -43,6 +44,7 @@ export {
   creator,
   web,
   github,
+  lighthouse,
   menu,
   close,
   css,
