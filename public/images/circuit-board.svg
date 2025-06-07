@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient Definitions -->
+    <linearGradient id="background-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#background-gradient)" />
+
+  <!-- Phases and Steps -->
+  <g fill="#04D1CE" filter="url(#glow)">
+    <!-- Planning Phase -->
+    <circle cx="100" cy="100" r="20" /> <!-- Lightbulb Icon -->
+    <rect x="150" y="80" width="40" height="40" rx="5" /> <!-- Document Icon -->
+
+    <!-- Design Phase -->
+    <rect x="300" y="200" width="40" height="40" rx="5" /> <!-- Pencil Icon -->
+    <circle cx="350" cy="220" r="20" /> <!-- Palette Icon -->
+
+    <!-- Development Phase -->
+    <rect x="500" y="300" width="40" height="40" rx="5" /> <!-- Code Window Icon -->
+    <circle cx="550" cy="320" r="20" /> <!-- Gear Icon -->
+
+    <!-- Testing Phase -->
+    <path d="M700 400 L720 420 L700 420 Z" /> <!-- Test Tube Icon -->
+    <circle cx="750" cy="420" r="20" /> <!-- Bug Icon -->
+
+    <!-- Deployment Phase -->
+    <path d="M900 500 L920 520 L900 520 Z" /> <!-- Rocket Icon -->
+    <rect x="950" y="520" width="40" height="40" rx="5" /> <!-- Server Icon -->
+
+    <!-- Scaling Phase -->
+    <ellipse cx="1100" cy="600" rx="20" ry="10" /> <!-- Chart Icon -->
+    <circle cx="1150" cy="620" r="20" /> <!-- Cloud Icon -->
+  </g>
+
+  <!-- Curved Neon Circuit Lines -->
+  <g stroke="#04D1CE" stroke-width="2" fill="none" filter="url(#glow)">
+    <path d="M100 100 C 125 125, 150 125, 150 100" />
+    <path d="M190 100 C 225 150, 275 150, 300 200" />
+    <path d="M340 220 C 375 250, 475 250, 500 300" />
+    <path d="M540 320 C 575 350, 675 350, 700 400" />
+    <path d="M720 420 C 750 450, 850 450, 900 500" />
+    <path d="M940 520 C 975 550, 1075 550, 1100 600" />
+    <path d="M1120 620 C 1150 650, 1200 650, 1150 620" />
+  </g>
+
+  <!-- Abstract Tech Elements -->
+  <g fill="#04D1CE" opacity="0.2" filter="url(#glow)">
+    <circle cx="500" cy="500" r="300" />
+    <rect x="200" y="200" width="600" height="600" rx="50" />
+  </g>
+</svg>

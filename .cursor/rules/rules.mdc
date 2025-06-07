@@ -1,0 +1,64 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# ✅ Design & Layout Rules
+
+- Use a **mobile-first** responsive layout across all components and pages.
+- Always enable and support **dark mode**; light mode is optional.
+- Apply **consistent spacing** using the theme's `spacing` tokens (no hardcoded values).
+- Apply **radius** values using `theme.radius` — never custom pixel borders.
+- Use **theme.colors** for all background, text, and accent colors — no hex codes in JSX.
+- Typography must follow: `Orbitron` for headings, `Inter` for body text.
+- All sections should include **semantic HTML5 structure** (e.g., `<section>`, `<header>`, `<main>`, `<footer>`).
+
+---
+
+# 🧱 Component Rules
+
+- Reuse styled components and extract shared logic (e.g., `SectionWrapper`, `ThemeButton`, etc.).
+- Use **NextUI** components by default (e.g., `Card`, `Button`, `Grid`) unless a custom one is needed.
+- Add **AOS** `data-aos` attributes for scroll-based animation sections where appropriate.
+- Use **Framer Motion** for complex interactive transitions if required (but not for simple fades).
+
+---
+
+# 🎨 Theme & Styling Rules
+
+- Import and use design tokens from `theme.ts` in all styled components.
+- Do not use inline styles unless necessary for dynamic logic.
+- Never hardcode `padding`, `margin`, `font-size`, or `color` values — use theme spacing/fonts/colors.
+- Shadow and glow effects should only come from `theme.shadows`.
+
+---
+
+# 🧑‍💻 Tech Stack Enforcement
+
+- Use **Next.js (App Router or Pages)** as base framework.
+- Use **NextUI** as the UI library; all layout and interactive components must be based on it.
+- Use **Tailwind CSS only if installed**, and follow the exact version rules from `package.json`.
+- Do not override or change Tailwind CSS version — always use the one declared.
+- Use **NextUI’s theming system** for global colors, font overrides, and radii.
+
+---
+
+# ⚙️ Code Quality & Structure
+
+- Follow modern React best practices (functional components, hooks, etc.)
+- Prefer composable layouts and atomic components
+- Use `theme.ts` as the single source of design truth
+- Centralize config into `/lib/` where possible
+- Each page/component must be in its own folder with `index.tsx` and `style.ts` if needed
+
+---
+
+# 💡 Project Rules for Cursor AI
+
+- Respect all tokens defined in `theme.ts` when generating or modifying UI code.
+- Never downgrade Tailwind CSS or use deprecated classes or features.
+- Suggest from the actual tech stack: Next.js + NextUI + AOS + Inter + Orbitron + dark mode.
+- Do not suggest external packages unless they align with the existing stack.
+- Favor reusable, scalable, and clean solutions over quick fixes.
+
+
