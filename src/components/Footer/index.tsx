@@ -64,11 +64,11 @@ export function Footer() {
               Get in Touch
             </h3>
             <Link
-              href="mailto:contact@nicoscript.dev"
+              href="mailto:info@nicoscript.com"
               className="text-text/80 dark:text-text-dark/80 hover:text-accent dark:hover:text-accent-dark transition-colors flex items-center gap-2 mb-4"
             >
               <Mail size={20} />
-              contact@nicoscript.dev
+              info@nicoscript.com
             </Link>
 
             {/* Social Links */}

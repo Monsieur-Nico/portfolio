@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'NicoScript - Web Development Studio',
   description:
     'Modern web solutions that combine stunning design with powerful performance.',
+  metadataBase: new URL('https://nicoscript.com'),
+  authors: [{ name: 'NicoScript', url: 'https://nicoscript.com' }],
+  creator: 'NicoScript',
 };
 
 export default function RootLayout({
