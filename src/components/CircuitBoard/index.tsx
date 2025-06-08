@@ -1,5 +1,6 @@
 'use client';
 
+import { theme } from '@/lib/theme';
 import { useEffect, useRef, useState } from 'react';
 
 export function CircuitBoard() {
@@ -73,25 +74,25 @@ export function CircuitBoard() {
         ref={boardRef}
         className="fixed inset-0 transition-opacity duration-700"
         style={{
-          zIndex: 0,
+          zIndex: theme.zIndices.base,
           backgroundImage: 'url("/images/circuit-board.svg")',
           backgroundSize: '1600px',
           backgroundRepeat: 'repeat',
           backgroundPosition: `center ${offsetY}px`,
           opacity: opacity,
           filter: 'brightness(1.1)',
-          maskImage: `radial-gradient(circle 400px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
-          WebkitMaskImage: `radial-gradient(circle 400px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
+          maskImage: `radial-gradient(circle 250px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
+          WebkitMaskImage: `radial-gradient(circle 250px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
         }}
       />
       <div
         className="fixed inset-0 pointer-events-none transition-opacity duration-700"
         style={{
           zIndex: 1,
-          background: `radial-gradient(circle 400px at ${cursorPos.x} ${cursorPos.y}, #00D1B2 0%, transparent 70%)`,
+          background: `radial-gradient(circle 250px at ${cursorPos.x} ${cursorPos.y}, ${theme.colors.accent.dark} 0%, transparent 70%)`,
           opacity: glowOpacity,
-          maskImage: `radial-gradient(circle 400px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
-          WebkitMaskImage: `radial-gradient(circle 400px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
+          maskImage: `radial-gradient(circle 250px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
+          WebkitMaskImage: `radial-gradient(circle 250px at ${cursorPos.x} ${cursorPos.y}, white 0%, transparent 100%)`,
         }}
       />
     </>
