@@ -1,5 +1,6 @@
 'use client';
 
+import { theme } from '@/lib/theme';
 import { Link } from '@nextui-org/react';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
@@ -9,7 +10,7 @@ export function Footer() {
       id="contact"
       className="bg-surface dark:bg-surface-dark py-12 border-t border-border dark:border-border-dark"
     >
-      <div className="container mx-auto px-4">
+      <div className={theme.components.section.wrapper}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
@@ -27,7 +28,12 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-heading text-lg font-bold mb-4 text-text dark:text-text-dark">
+            <h3
+              className={
+                theme.components.heading.h4 +
+                ' mb-4 text-text dark:text-text-dark'
+              }
+            >
               Quick Links
             </h3>
             <nav className="flex flex-col gap-2">
@@ -60,7 +66,12 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-heading text-lg font-bold mb-4 text-text dark:text-text-dark">
+            <h3
+              className={
+                theme.components.heading.h4 +
+                ' mb-4 text-text dark:text-text-dark'
+              }
+            >
               Get in Touch
             </h3>
             <Link
