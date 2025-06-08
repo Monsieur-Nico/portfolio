@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background dark:bg-background-dark text-text dark:text-text-dark;
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-orbitron), sans-serif;
+  }
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Project placeholders */
+.project-placeholder {
+  @apply relative w-full h-48 rounded-lg overflow-hidden;
+}
+
+.project-placeholder::before {
+  content: '';
+  @apply absolute inset-0;
+}
+
+.project-placeholder.ecommerce::before {
+  @apply bg-gradient-to-br from-purple-500 to-pink-500;
+}
+
+.project-placeholder.dashboard::before {
+  @apply bg-gradient-to-br from-blue-500 to-cyan-500;
+}
+
+.project-placeholder.social::before {
+  @apply bg-gradient-to-br from-green-500 to-teal-500;
+}
+
+/* Smooth scroll behavior */
+html {
+  @apply scroll-smooth;
+}
+
+/* Dark mode styles */
+.dark {
+  color-scheme: dark;
+}
