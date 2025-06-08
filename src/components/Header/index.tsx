@@ -1,5 +1,6 @@
 'use client';
 
+import { theme } from '@/lib/theme';
 import { Button } from '@nextui-org/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -9,20 +10,25 @@ import { useEffect, useState } from 'react';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme: currentTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
   };
 
   if (!mounted) {
     return (
       <header className="fixed top-0 w-full bg-surface/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-border dark:border-border-dark z-50">
-        <nav className="container h-16 flex items-center justify-between">
+        <nav
+          className={
+            theme.components.section.wrapper +
+            ' h-16 flex items-center justify-between'
+          }
+        >
           <Link
             href="/"
             className="font-heading text-xl text-accent dark:text-accent-dark hover:text-accent-soft dark:hover:text-accent-soft-dark transition-colors"
@@ -36,7 +42,12 @@ export function Header() {
 
   return (
     <header className="fixed top-0 w-full bg-surface/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-border dark:border-border-dark z-50">
-      <nav className="container h-16 flex items-center justify-between">
+      <nav
+        className={
+          theme.components.section.wrapper +
+          ' h-16 flex items-center justify-between'
+        }
+      >
         <Link
           href="/"
           className="font-heading text-xl text-accent dark:text-accent-dark hover:text-accent-soft dark:hover:text-accent-soft-dark transition-colors"
@@ -83,10 +94,13 @@ export function Header() {
             isIconOnly
             variant="light"
             onPress={toggleTheme}
-            className="text-text dark:text-text-dark hover:text-accent dark:hover:text-accent-dark"
+            className={
+              theme.components.button.icon +
+              ' text-text dark:text-text-dark hover:text-accent dark:hover:text-accent-dark'
+            }
             aria-label="Toggle theme"
           >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            {currentTheme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </Button>
         </div>
 
@@ -126,10 +140,17 @@ export function Header() {
                 isIconOnly
                 variant="light"
                 onPress={toggleTheme}
-                className="text-text dark:text-text-dark hover:text-accent dark:hover:text-accent-dark w-fit"
+                className={
+                  theme.components.button.icon +
+                  ' text-text dark:text-text-dark hover:text-accent dark:hover:text-accent-dark w-fit'
+                }
                 aria-label="Toggle theme"
               >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                {currentTheme === 'dark' ? (
+                  <Sun size={20} />
+                ) : (
+                  <Moon size={20} />
+                )}
               </Button>
             </div>
           </div>
