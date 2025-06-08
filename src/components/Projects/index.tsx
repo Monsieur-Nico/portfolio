@@ -1,5 +1,6 @@
 'use client';
 
+import { theme } from '@/lib/theme';
 import { Card, CardBody, CardFooter, Chip, Link } from '@nextui-org/react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
@@ -40,8 +41,13 @@ export function Projects() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="projects" className="py-20 bg-surface dark:bg-surface-dark">
-      <div className="container mx-auto px-4">
+    <section
+      id="projects"
+      className={
+        theme.components.section.default + ' bg-surface dark:bg-surface-dark'
+      }
+    >
+      <div className={theme.components.section.wrapper}>
         <motion.div
           ref={ref}
           initial={{ y: 50, opacity: 0 }}
@@ -52,7 +58,7 @@ export function Projects() {
             delay: 0.5,
           }}
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className={theme.components.heading.h2 + ' mb-12 text-center'}>
             Featured{' '}
             <span className="text-accent dark:text-accent-dark">Projects</span>
           </h2>
@@ -61,7 +67,11 @@ export function Projects() {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="bg-background dark:bg-background-dark border-border dark:border-border-dark hover:border-accent dark:hover:border-accent-dark transition-colors"
+                className={
+                  theme.components.card.base +
+                  ' ' +
+                  theme.components.card.interactive
+                }
                 shadow="none"
               >
                 <div
@@ -69,7 +79,12 @@ export function Projects() {
                 />
 
                 <CardBody className="p-6">
-                  <h3 className="font-heading text-xl font-bold mb-2 text-text dark:text-text-dark">
+                  <h3
+                    className={
+                      theme.components.heading.h3 +
+                      ' mb-2 text-text dark:text-text-dark'
+                    }
+                  >
                     {project.title}
                   </h3>
                   <p className="text-text/80 dark:text-text-dark/80 mb-4">
