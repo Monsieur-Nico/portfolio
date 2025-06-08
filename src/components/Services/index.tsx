@@ -1,5 +1,6 @@
 'use client';
 
+import { theme } from '@/lib/theme';
 import { Card, CardBody } from '@nextui-org/react';
 import { motion, useInView } from 'framer-motion';
 import { Code2, Gauge, Palette } from 'lucide-react';
@@ -31,8 +32,8 @@ export function Services() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="services" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="services" className={theme.components.section.default}>
+      <div className={theme.components.section.wrapper}>
         <motion.div
           ref={ref}
           initial={{ y: 50, opacity: 0 }}
@@ -43,7 +44,7 @@ export function Services() {
             delay: 0.5,
           }}
         >
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">
+          <h2 className={theme.components.heading.h2 + ' mb-12 text-center'}>
             Our{' '}
             <span className="text-accent dark:text-accent-dark">Services</span>
           </h2>
@@ -52,12 +53,21 @@ export function Services() {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="bg-surface dark:bg-surface-dark border-border dark:border-border-dark hover:border-accent dark:hover:border-accent-dark transition-colors"
+                className={
+                  theme.components.card.base +
+                  ' ' +
+                  theme.components.card.interactive
+                }
                 shadow="none"
               >
                 <CardBody className="p-6">
                   <div className="mb-4">{service.icon}</div>
-                  <h3 className="font-heading text-xl font-bold mb-3 text-text dark:text-text-dark">
+                  <h3
+                    className={
+                      theme.components.heading.h3 +
+                      ' mb-3 text-text dark:text-text-dark'
+                    }
+                  >
                     {service.title}
                   </h3>
                   <p className="text-text/80 dark:text-text-dark/80">
