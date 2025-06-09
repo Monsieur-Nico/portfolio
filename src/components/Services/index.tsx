@@ -4,32 +4,12 @@ import { services } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Card, CardBody } from '@nextui-org/react';
 import { motion, useInView } from 'framer-motion';
-import { Code2, Gauge, Palette } from 'lucide-react';
+import { getIconComponent } from '@/lib/iconMap';
 import { useRef } from 'react';
 
 export function Services() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  // Helper function to get the correct icon component based on icon name
-  const getIconComponent = (iconName: string, size = 40) => {
-    switch (iconName.toLowerCase()) {
-      case 'code':
-        return (
-          <Code2 size={size} className="text-accent dark:text-accent-dark" />
-        );
-      case 'palette':
-        return (
-          <Palette size={size} className="text-accent dark:text-accent-dark" />
-        );
-      case 'gauge':
-        return (
-          <Gauge size={size} className="text-accent dark:text-accent-dark" />
-        );
-      default:
-        return null;
-    }
-  };
 
   return (
     <section id="services" className={theme.components.section.default}>
@@ -61,7 +41,7 @@ export function Services() {
                 shadow="none"
               >
                 <CardBody className="p-6">
-                  <div className="mb-4">{getIconComponent(service.icon)}</div>
+                  <div className="mb-4">{getIconComponent(service.icon, 40)}</div>
                   <h3
                     className={
                       theme.components.heading.h3 +
