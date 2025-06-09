@@ -1,40 +1,11 @@
 'use client';
 
+import { projects } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Card, CardBody, CardFooter, Chip, Link } from '@nextui-org/react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import { useRef } from 'react';
-
-const projects = [
-  {
-    title: 'E-Commerce Platform',
-    description:
-      'A modern e-commerce solution with real-time inventory and seamless checkout.',
-    placeholderClass: 'ecommerce',
-    tags: ['Next.js', 'TypeScript', 'Stripe'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'AI Dashboard',
-    description:
-      'Analytics dashboard with AI-powered insights and data visualization.',
-    placeholderClass: 'dashboard',
-    tags: ['React', 'Python', 'TensorFlow'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    title: 'Social Platform',
-    description:
-      'Community-driven platform with real-time messaging and content sharing.',
-    placeholderClass: 'social',
-    tags: ['Vue.js', 'Node.js', 'WebSocket'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-];
 
 export function Projects() {
   const ref = useRef(null);
