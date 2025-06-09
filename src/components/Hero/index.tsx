@@ -1,5 +1,6 @@
 'use client';
 
+import { companyInfo } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Button } from '@nextui-org/react';
 import { motion } from 'framer-motion';
@@ -18,10 +19,10 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className={theme.components.heading.h1 + ' mb-6'}
         >
-          Crafting Digital
+          {companyInfo.heroHeading}
           <span className="text-accent dark:text-accent-dark">
             {' '}
-            Experiences
+            {companyInfo.name}
           </span>
         </motion.h1>
 
@@ -31,8 +32,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-text/80 dark:text-text-dark/80 max-w-2xl mx-auto mb-12"
         >
-          Modern web solutions that combine stunning design with powerful
-          performance. Let&apos;s build something extraordinary together.
+          {companyInfo.description}
         </motion.p>
 
         <motion.div
@@ -41,13 +41,20 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Button size="lg" className={theme.components.button.primary}>
+          <Button
+            size="lg"
+            className={theme.components.button.primary}
+            as="a"
+            href="#contact"
+          >
             Start a Project
           </Button>
           <Button
             size="lg"
             variant="bordered"
             className={theme.components.button.secondary}
+            as="a"
+            href="#projects"
           >
             View Our Work
           </Button>
