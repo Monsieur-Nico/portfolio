@@ -3,22 +3,10 @@
 import { companyInfo, siteInfo, socialLinks } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Link } from '@nextui-org/react';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { getIconComponent } from '@/lib/iconMap';
 
 export function Footer() {
-  // Helper function to get the correct icon component based on icon name
-  const getIconComponent = (iconName: string, size = 24) => {
-    switch (iconName.toLowerCase()) {
-      case 'github':
-        return <Github size={size} />;
-      case 'twitter':
-        return <Twitter size={size} />;
-      case 'linkedin':
-        return <Linkedin size={size} />;
-      default:
-        return null;
-    }
-  };
 
   return (
     <footer
