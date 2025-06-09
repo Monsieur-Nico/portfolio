@@ -1,5 +1,6 @@
 'use client';
 
+import { siteInfo } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Button } from '@nextui-org/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
@@ -33,7 +34,7 @@ export function Header() {
             href="/"
             className="font-heading text-xl text-accent dark:text-accent-dark hover:text-accent-soft dark:hover:text-accent-soft-dark transition-colors"
           >
-            NicoScript
+            {siteInfo.siteName}
           </Link>
         </nav>
       </header>
@@ -52,7 +53,7 @@ export function Header() {
           href="/"
           className="font-heading text-xl text-accent dark:text-accent-dark hover:text-accent-soft dark:hover:text-accent-soft-dark transition-colors"
         >
-          NicoScript
+          {siteInfo.siteName}
         </Link>
 
         {/* Mobile Menu Button */}
