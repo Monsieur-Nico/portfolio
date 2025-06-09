@@ -1,10 +1,25 @@
 'use client';
 
+import { companyInfo, siteInfo, socialLinks } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Link } from '@nextui-org/react';
 import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 export function Footer() {
+  // Helper function to get the correct icon component based on icon name
+  const getIconComponent = (iconName: string, size = 24) => {
+    switch (iconName.toLowerCase()) {
+      case 'github':
+        return <Github size={size} />;
+      case 'twitter':
+        return <Twitter size={size} />;
+      case 'linkedin':
+        return <Linkedin size={size} />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <footer
       id="contact"
@@ -18,11 +33,10 @@ export function Footer() {
               href="/"
               className="font-heading text-xl text-accent dark:text-accent-dark hover:text-accent/80 dark:hover:text-accent-dark/80 transition-colors"
             >
-              NicoScript
+              {siteInfo.siteName}
             </Link>
             <p className="mt-4 text-text/80 dark:text-text-dark/80">
-              Crafting exceptional digital experiences with modern web
-              technologies.
+              {siteInfo.tagline}
             </p>
           </div>
 
@@ -75,43 +89,36 @@ export function Footer() {
               Get in Touch
             </h3>
             <Link
-              href="mailto:info@nicoscript.com"
+              href={`mailto:${companyInfo.email}`}
               className="text-text/80 dark:text-text-dark/80 hover:text-accent dark:hover:text-accent-dark transition-colors flex items-center gap-2 mb-4"
             >
               <Mail size={20} />
-              info@nicoscript.com
+              {companyInfo.email}
             </Link>
 
             {/* Social Links */}
             <div className="flex gap-4">
-              <Link
-                href="https://github.com"
-                isExternal
-                className="text-text/80 dark:text-text-dark/80 hover:text-accent dark:hover:text-accent-dark transition-colors"
-              >
-                <Github size={24} />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                isExternal
-                className="text-text/80 dark:text-text-dark/80 hover:text-accent dark:hover:text-accent-dark transition-colors"
-              >
-                <Twitter size={24} />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                isExternal
-                className="text-text/80 dark:text-text-dark/80 hover:text-accent dark:hover:text-accent-dark transition-colors"
-              >
-                <Linkedin size={24} />
-              </Link>
+              {socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.url}
+                  isExternal
+                  className="text-text/80 dark:text-text-dark/80 hover:text-accent dark:hover:text-accent-dark transition-colors"
+                >
+                  {getIconComponent(social.icon)}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border dark:border-border-dark text-center text-text/60 dark:text-text-dark/60">
           <p>
-            &copy; {new Date().getFullYear()} NicoScript. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteInfo.siteName}. All rights
+            reserved.
+          </p>
+          <p className="mt-2 text-sm">
+            Founded in {companyInfo.foundedYear} | {companyInfo.location}
           </p>
         </div>
       </div>
