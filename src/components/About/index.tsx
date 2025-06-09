@@ -1,5 +1,6 @@
 'use client';
 
+import { companyInfo } from '@/lib/data';
 import { theme } from '@/lib/theme';
 import { Button } from '@nextui-org/react';
 import { motion, useInView } from 'framer-motion';
@@ -34,28 +35,20 @@ export function About() {
             >
               About{' '}
               <span className="text-accent dark:text-accent-dark">
-                NicoScript
+                {companyInfo.name}
               </span>
             </h2>
             <div className="space-y-4 text-text/80 dark:text-text-dark/80">
-              <p>
-                We are a passionate team of developers and designers dedicated
-                to creating exceptional web experiences. Our approach combines
-                cutting-edge technology with thoughtful design to deliver
-                solutions that make an impact.
-              </p>
-              <p>
-                With expertise in modern frameworks and a deep understanding of
-                user experience, we help businesses transform their digital
-                presence and achieve their goals.
-              </p>
+              <p>{companyInfo.aboutDescription}</p>
             </div>
             <Button
+              as="a"
+              href="#contact"
               className={theme.components.button.secondary + ' mt-8'}
               variant="bordered"
               endContent={<FileText size={20} />}
             >
-              Download Resume
+              Contact Us
             </Button>
           </div>
 
